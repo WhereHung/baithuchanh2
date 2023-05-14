@@ -1,0 +1,297 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget{
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State< MyApp>{
+  @override
+  Widget build( BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar( 
+          actions: [
+              IconButton(
+                icon: const Icon(Icons.search, color: Color(0xff000000)),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: const Icon(Icons.favorite, color: Color(0xff108950)),
+                onPressed: () {
+                  // Xử lý sự kiện khi người dùng nhấn vào biểu tượng yêu thích
+                },
+              ),
+              IconButton(
+                icon: const Icon(Icons.shopping_cart, color: Color(0xff108950)),
+                onPressed: () {
+                  // Xử lý sự kiện khi người dùng nhấn vào biểu tượng giỏ hàng
+                },
+              ),
+            ],
+          backgroundColor: Color(0xffedeaea),
+          title: Text( 'Categories'),
+          titleTextStyle: TextStyle( fontSize:  24, color: Color(0xff0e0d0d))
+        ),
+        body:  
+        GridView.count( 
+          padding: EdgeInsets.all(10),
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8,
+          crossAxisCount: 2,
+          childAspectRatio: 2/1.5,
+          
+          children: <Widget>[
+              
+              Container(
+                
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Color(0xff5fc5bc),
+                  borderRadius: BorderRadius.circular( 14)
+                ),
+              child: Column(
+                
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://sieuthihangduconline.com/wp-content/uploads/2022/04/do-gia-dung-bang-go-1-1067x800-1.jpg'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Fashion',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                  ],
+                ),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                //padding: const EdgeInsets.all( 3),
+                decoration: BoxDecoration(
+                  color: Color(0xff389720),
+                  borderRadius:  BorderRadius.circular( 14)
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://sieuthihangduconline.com/wp-content/uploads/2022/04/batch_phong-tam-khach-san-bang-cua-kinh-cuong-luc.jpeg'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Beauty',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                  ],
+                ),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                //padding: const EdgeInsets.all( 3),
+                decoration: BoxDecoration(
+                  color: Color(0xff533d8e),
+                  borderRadius:  BorderRadius.circular( 14)
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://sieuthihangduconline.com/wp-content/uploads/2022/04/batch_ban-do-gia-dung-cu-kinh-doanh-thu-lai-khung-tai-sao-khong-1.png'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Electronics',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                  ],
+                ),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                //padding: const EdgeInsets.all( 3),
+                decoration: BoxDecoration(
+                  color: Color(0xff842c2c),
+                  borderRadius:  BorderRadius.circular( 14)
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://sieuthihangduconline.com/wp-content/uploads/2022/04/batch_dien-tich-phong-ngu-chuan.jpeg'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Jewellery',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                  ],
+                ),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                //padding: const EdgeInsets.all( 3),
+                decoration: BoxDecoration(
+                  color: Color(0xff2f2058),
+                  borderRadius:  BorderRadius.circular( 14)
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://linhvucbanle.com/wp-content/uploads/2021/03/do-dien-trong-gia-dinh.jpg'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Footwear',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                  ],
+                ),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                //padding: const EdgeInsets.all( 3),
+                decoration: BoxDecoration(
+                  color: Color(0xff0dbbe7),
+                  borderRadius:  BorderRadius.circular( 14)
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://bizweb.dktcdn.net/100/383/199/files/o1cn01opkfcr21ie1wy8kak-3120126962-1.jpg?v=1603087985595'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Toys',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                  ],
+                ),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                //padding: const EdgeInsets.all( 3),
+                decoration: BoxDecoration(
+                  color: Color(0xff184219),
+                  borderRadius:  BorderRadius.circular( 14)
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/10/30/850199/DM1.jpg'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Furniture',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                  ],
+                ),
+              ),
+
+              Container(
+                width: 200,
+                height: 200,
+                //padding: const EdgeInsets.all( 3),
+                decoration: BoxDecoration(
+                  color: Color(0xff708c25),
+                  borderRadius:  BorderRadius.circular( 14)
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const[
+                    Align(
+                        alignment: Alignment(-0.8, -0.7),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://www.lorca.vn/wp-content/uploads/2022/05/Cach-su-dung-lo-vi-song-lan-dau-dung-cach-va-mot-so-luu-y-2.jpg'),
+                          radius: 50,
+                    )
+                    ),
+                    Text( 'Mobiles',
+                      style: TextStyle(
+                        color: Color(0xff2c4e8b),
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),)
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        );
+      
+ 
+    
+  }
+}
+
